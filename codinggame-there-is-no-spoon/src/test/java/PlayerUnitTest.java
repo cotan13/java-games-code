@@ -13,6 +13,11 @@ public class PlayerUnitTest {
 
     private Player player2 = new Player();
 
+    /**
+     * Simple case
+     *  O O
+     *  O X
+     */
     @Test
     public void testSimpleInputLines() {
         String[] expected = {"0 0 1 0 0 1", "1 0 -1 -1 -1 -1" , "0 1 -1 -1 -1 -1"};
@@ -20,6 +25,10 @@ public class PlayerUnitTest {
         assertThat(actaul, is(expected));
     }
 
+    /**
+     * Horizontal case
+     *  O X O X O X
+     */
     @Test
     public void testHorizontalInputLines() {
         String[] expected = {"0 0 2 0 -1 -1","2 0 4 0 -1 -1","4 0 -1 -1 -1 -1"};
@@ -27,6 +36,13 @@ public class PlayerUnitTest {
         assertThat(actaul, is(expected));
     }
 
+    /**
+     * Vertical case
+     *  O
+     *  O
+     *  O
+     *  O
+     */
     @Test
     public void testVerticalInputLines() {
         String[] expected = {"0 0 -1 -1 0 1","0 1 -1 -1 0 2","0 2 -1 -1 0 3", "0 3 -1 -1 -1 -1"};
@@ -34,6 +50,11 @@ public class PlayerUnitTest {
         assertThat(actaul, is(expected));
     }
 
+    /**
+     * Square case 1
+     *  O O
+     *  O O
+     */
     @Test
     public void testCarre1InputLines() {
         String[] expected = {"0 0 1 0 0 1", "1 0 -1 -1 1 1" , "0 1 1 1 -1 -1", "1 1 -1 -1 -1 -1"};
@@ -41,6 +62,12 @@ public class PlayerUnitTest {
         assertThat(actaul, is(expected));
     }
 
+    /**
+     * Square case 2
+     *  O X O
+     *  X X X
+     *  O X O
+     */
     @Test
     public void testCarre2InputLines() {
         String[] expected = {"0 0 2 0 0 2", "2 0 -1 -1 2 2" , "0 2 2 2 -1 -1", "2 2 -1 -1 -1 -1"};
@@ -48,6 +75,12 @@ public class PlayerUnitTest {
         assertThat(actaul, is(expected));
     }
 
+    /**
+     * T case
+     *  O O O
+     *  X O X
+     *  X O X
+     */
     @Test
     public void testTInputLines() {
         String[] expected = {"0 0 1 0 -1 -1", "1 0 2 0 1 1" , "2 0 -1 -1 -1 -1", "1 1 -1 -1 1 2", "1 2 -1 -1 -1 -1"};
@@ -55,6 +88,13 @@ public class PlayerUnitTest {
         assertThat(actaul, is(expected));
     }
 
+    /**
+     * Diagonal case
+     *  O X X X
+     *  X O X X
+     *  X X O X
+     *  X X X O
+     */
     @Test
     public void testDiagonalInputLines() {
         String[] expected = {"0 0 -1 -1 -1 -1", "1 1 -1 -1 -1 -1", "2 2 -1 -1 -1 -1", "3 3 -1 -1 -1 -1"};
@@ -62,6 +102,13 @@ public class PlayerUnitTest {
         assertThat(actaul, is(expected));
     }
 
+    /**
+     * Complex case
+     *  O O X O
+     *  O X O O
+     *  X O X O
+     *  O O O X
+     */
     @Test
     public void testComplexInputLines() {
         String[] expected = {"0 0 1 0 0 1", "1 0 3 0 1 2", "3 0 -1 -1 3 1", "0 1 2 1 0 3",
@@ -71,6 +118,16 @@ public class PlayerUnitTest {
         assertThat(actaul, is(expected));
     }
 
+    /**
+     * Shurikan case
+     X X O X X X X
+     X X X X X X X
+     X X O X O X O
+     X X X X X X X
+     O X O X O X X
+     X X X X X X X
+     X X X X O X X
+     */
 
     @Test
     public void testShurikanInputLines() {

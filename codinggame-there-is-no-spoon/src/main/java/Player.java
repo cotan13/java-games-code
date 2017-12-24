@@ -8,7 +8,7 @@ public class Player {
 
     private static final char ZERO = '0';
     private static final char SPACE = ' ';
-    public static final String END = "-1 -1";
+    private static final String END = "-1 -1";
 
     public String[] thereIsNoSpoon(int width, int height, String... lines) {
         List<String> r = new ArrayList<>();
@@ -17,8 +17,8 @@ public class Player {
             for (int x = 0; x < width; x++) {
                 if (lines[y].charAt(x) != ZERO) continue;
                 String currentPosition = x + " " + y;
-                currentPosition += SPACE + nextToMeInRight(lines, x, y, width);
-                currentPosition += SPACE + nextToMeInBelow(lines, x, y, height);
+                currentPosition += SPACE + nextPointOnTheRight(lines, x, y, width);
+                currentPosition += SPACE + nextPointOnTheBelow(lines, x, y, height);
                 r.add(currentPosition);
             }
         }
@@ -26,7 +26,7 @@ public class Player {
     }
 
 
-    private String nextToMeInRight(String[] lines, int x, int y, int width) {
+    private String nextPointOnTheRight(String[] lines, int x, int y, int width) {
         if(x +1 >= width){
             return END;
         }
@@ -37,7 +37,7 @@ public class Player {
         return END;
     }
 
-    private String nextToMeInBelow(String[] lines, int x, int y, int height) {
+    private String nextPointOnTheBelow(String[] lines, int x, int y, int height) {
         if( y +1 >= height){
             return END;
         }
