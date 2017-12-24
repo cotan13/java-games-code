@@ -10,7 +10,7 @@
     <version>1.0-SNAPSHOT</version>
     <modules>
         <module>sorting-examples</module>
-        <module>codinggame-there-is-no-spoon</module>
+        <module>codinggame</module>
     </modules>
 
     <properties>
