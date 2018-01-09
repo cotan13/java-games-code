@@ -1,4 +1,4 @@
-package sb.codinggamme.thereisnospoon;
+package sb.codinggame.there_is_no_spoon;
 
 import java.util.ArrayList;
 import java.util.List;

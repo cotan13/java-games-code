@@ -1,8 +1,4 @@
-package sb.codinggamme.shadowoftheking;
-
-import java.util.ArrayList;
-import java.util.Collections;
-import java.util.List;
+package sb.codinggame.shadow_of_the_knight;
 
 /**
  * Created by cotan on 24/12/2017.
@@ -36,8 +32,8 @@ public class Player {
             if (dir.contains("R")) x0 = x + 1;
             if (dir.contains("L")) xn = x - 1;
 
-            x = x0 + (xn - x0) / 2;
-            y = y0 + (yn - y0) / 2;
+            x = (xn + x0) / 2;
+            y = (yn + y0) / 2;
 
             lastPosition = x + SPACE + y;
         }

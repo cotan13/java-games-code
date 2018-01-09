@@ -11,6 +11,7 @@
     <modules>
         <module>sorting-examples</module>
         <module>codinggame</module>
+        <module>rxjava-examples</module>
     </modules>
 
     <properties>

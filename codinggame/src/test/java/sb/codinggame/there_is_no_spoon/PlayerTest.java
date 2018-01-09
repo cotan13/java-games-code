@@ -1,4 +1,4 @@
-package sb.codinggamme.thereisnospoon;
+package sb.codinggame.there_is_no_spoon;
 
 import org.junit.Test;
 import org.junit.runner.RunWith;
@@ -11,7 +11,7 @@ import static org.hamcrest.MatcherAssert.assertThat;
  * Created by cotan on 23/12/2017.
  */
 @RunWith(JUnit4.class)
-public class PlayerUnitTest {
+public class PlayerTest {
 
     private Player player2 = new Player();
 
